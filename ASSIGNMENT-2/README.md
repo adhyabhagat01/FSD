@@ -18,7 +18,9 @@ The objectives of this assignment are:
 
 • To create a professional digital portfolio
 
+
 Technologies Used
+
 The following technologies were used in this project:
 Technology	Purpose
 
@@ -29,6 +31,7 @@ Technology	Purpose
 3.Bootstrap-Responsive UI components
 
 4.JavaScript -Basic functionality and script execution
+
 
 Project Structure
 Assignment-2-Portfolio
@@ -45,6 +48,7 @@ Assignment-2-Portfolio
 
 └── README.md
 
+
 UI Design Features
 The project includes several design enhancements:
 
@@ -60,6 +64,7 @@ The project includes several design enhancements:
 
 •	Easy navigation using navbar links
 
+
 Expected Output
 The portfolio website includes the following sections:
 
@@ -72,6 +77,7 @@ The portfolio website includes the following sections:
 •	Certifications Section
 
 •	Contact Section
+
 
 Learning Outcomes
 Through this assignment, the following concepts were learned:
@@ -88,7 +94,9 @@ Through this assignment, the following concepts were learned:
 
 • Organizing a front-end project structure
 
+
 Author
 Adhya Bhagat
+
 
 
