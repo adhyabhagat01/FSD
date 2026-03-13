@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f6fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.custom-navbar {
+    background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+}
+
+
+.btn-dark {
+    background-color: #7b2cbf;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #5a189a;
+}
+
+
+footer {
+    background: #7b2cbf;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+
+#homeSection {
+    position: relative;
+    background-image: url('https://media.istockphoto.com/id/1339842854/vector/colorful-abstract-wave-design-template-background.jpg?s=1024x1024&w=is&k=20&c=PQ4PeeKHWNW7HuGFv2CMXp18SEtnsK21wFBGAXtTln8=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+}
+
+
+#homeSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#homeSection h1,
+#homeSection p,
+#homeSection button,
+#homeSection h3,
+#homeSection .card {
+    position: relative;
+    z-index: 2;
+}
