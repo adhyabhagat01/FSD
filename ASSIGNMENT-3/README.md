@@ -43,9 +43,11 @@ Assignment-3-Fashion-Store
 ├── index.html
 
 ├── css
+
 │   └── style.css
 
 ├── js
+
 │   └── script.js
 
 └── README.md
@@ -112,5 +114,6 @@ Through this assignment, the following concepts were learned:
 
 Author
 Adhya Bhagat
+
 
 
