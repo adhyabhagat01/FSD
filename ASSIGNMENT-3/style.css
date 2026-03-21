@@ -1,64 +1,99 @@
+/* BODY BACKGROUND */
 body {
-    background-color: #f8f6fb;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(135deg, #f8f6fb 60%, #e0d4f7 100%);
     min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* REMOVE WHITE BLOCK */
+.container {
+    background: transparent;
+}
 
+/* NAVBAR */
 .custom-navbar {
-    background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+    background: linear-gradient(45deg, #7b2cbf, #9d4edd) !important;
 }
 
+/* FORCE NAVBAR COLOR */
+.navbar {
+    background: linear-gradient(45deg, #7b2cbf, #9d4edd) !important;
+}
+/* HERO SECTION */
+.hero-box {
+    background: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85') center/cover;
+    border-radius: 12px;
+}
 
+/* PRODUCT IMAGE */
+.product-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+/* NAV BUTTONS */
+.navbar .btn {
+    background: white !important;
+    color: black !important;
+}
+
+.navbar .btn:hover {
+    background: #e0d4f7 !important;
+    color: #7b2cbf !important;
+}
+
+/* LOGIN BUTTON */
+.navbar .btn-warning {
+    background: #ffb703 !important;
+}
+
+/* PRODUCT BUTTON */
 .btn-dark {
     background-color: #7b2cbf;
-    border: none;
 }
 
 .btn-dark:hover {
     background-color: #5a189a;
 }
 
+/* HOME BACKGROUND */
+#homeSection {
 
+    background-image: url('https://media.istockphoto.com/id/1339842854/vector/colorful-abstract-wave-design-template-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* CARDS */
+.card {
+    border-radius: 15px;
+    background: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
 footer {
     background: #7b2cbf;
     color: white;
-    text-align: center;
     padding: 15px;
-    margin-top: auto;
-}
-
-
-#homeSection {
-    position: relative;
-    background-image: url('https://media.istockphoto.com/id/1339842854/vector/colorful-abstract-wave-design-template-background.jpg?s=1024x1024&w=is&k=20&c=PQ4PeeKHWNW7HuGFv2CMXp18SEtnsK21wFBGAXtTln8=');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 20px;
-    border-radius: 10px;
-    color: white;
-    overflow: hidden;
-}
-
-
-#homeSection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-#homeSection h1,
-#homeSection p,
-#homeSection button,
-#homeSection h3,
-#homeSection .card {
-    position: relative;
-    z-index: 2;
+    margin-top: 30px;
 }
