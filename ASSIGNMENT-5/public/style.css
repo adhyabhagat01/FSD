@@ -1,0 +1,57 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+/* Navbar fix */
+.navbar-nav {
+  flex-direction: row !important;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin: 40px 0;
+  font-weight: bold;
+}
+
+/* Profile image */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #333;
+}
+
+/* Objective box */
+.objective-box {
+  background: #dbefff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Cards */
+.project-card {
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Colors */
+.card-1 { background: #e3f2fd; }
+.card-2 { background: #e8f5e9; }
+.card-3 { background: #fff3e0; }
+.card-4 { background: #fce4ec; }
+.card-5 { background: #ede7f6; }
+.card-6 { background: #e0f7fa; }
+
+/* Row fix */
+.row {
+  justify-content: center;
+}
