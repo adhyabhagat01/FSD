@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- IMPORTANT: Use local chart.js file -->
+  <script src="chart.js"></script>
+</head>
 
+<body>
+
+<div class="container">
+  <h1>🌦 Weather Dashboard</h1>
+
+  <!-- Controls -->
+  <div class="controls">
+    <select id="citySelect">
+      <option value="pune">Pune</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="delhi">Delhi</option>
+    </select>
+
+    <select id="dateSelect">
+      <option value="week1">Week 1</option>
+      <option value="week2">Week 2</option>
+    </select>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <h3>Temperature</h3>
+      <p id="temp">-- °C</p>
+    </div>
+    <div class="card">
+      <h3>Humidity</h3>
+      <p id="humidity">-- %</p>
+    </div>
+    <div class="card">
+      <h3>Wind Speed</h3>
+      <p id="wind">-- km/h</p>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts">
+    <canvas id="tempChart"></canvas>
+    <canvas id="humidityChart"></canvas>
+    <canvas id="pieChart"></canvas>
+    <canvas id="histChart"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
