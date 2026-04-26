@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adhya Fashion Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#">Adhya Fashion Store</a>
+
+        <!-- Search -->
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Search products...">
+            <button class="btn btn-light">Search</button>
+        </form>
+
+        <!-- Buttons -->
+        <div class="ms-auto">
+            <button class="btn btn-light me-2" onclick="showHome()">Home</button>
+            <button class="btn btn-light me-2" onclick="showShop()">Shop</button>
+            <button class="btn btn-light me-2" onclick="showCart()">Cart (<span id="cartCount">0</span>)</button>
+            <button class="btn btn-light me-2">Orders</button>
+            <button class="btn btn-warning me-2">Login</button>
+            <button class="btn btn-light">Help</button>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME SECTION -->
+<div id="homeSection" class="container mt-5 text-center">
+
+    <div class="hero-box p-5 mb-5">
+        <h1 class="text-white">Welcome to Adhya Fashion Store 💖</h1>
+        <p class="text-white">Your one-stop shop for trendy outfits.</p>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- CLOTHES -->
+     <h3 class="mb-4">Clothes</h3>
+   <div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="card product-card text-center">
+            <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVkJTIwZHJlc3N8ZW58MHx8MHx8fDA%3D"
+                 class="product-img">
+            <h5>Red Dress</h5>
+            <p>₹1000</p>
+            <button class="btn btn-dark w-100" onclick="addToCart(1000)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card product-card text-center">
+            <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=400&q=80"
+                 class="product-img">
+            <h5>Elegant Gown</h5>
+            <p>₹1800</p>
+            <button class="btn btn-dark w-100" onclick="addToCart(1800)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card product-card text-center">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=400&q=80"
+                 class="product-img">
+            <h5>Blue Jeans</h5>
+            <p>₹1500</p>
+            <button class="btn btn-dark w-100" onclick="addToCart(1500)">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+    <hr class="my-5">
+
+    <!-- SHOES -->
+    <h3 class="mb-4">👠 Shoes</h3>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="White Sneakers">
+                <h5>White Sneakers</h5>
+                <p>₹2000</p>
+                <button class="btn btn-dark" onclick="addToCart(2000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="Stylish Heels">
+                <h5>Stylish Heels</h5>
+                <p>₹2200</p>
+                <button class="btn btn-dark" onclick="addToCart(2200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1528701800489-20be3c5f08c9?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="Running Shoes">
+                <h5>Running Shoes</h5>
+                <p>₹2500</p>
+                <button class="btn btn-dark" onclick="addToCart(2500)">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="my-5">
+
+    <!-- BAGS -->
+    <h3 class="mb-4">👜 More</h3>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="Handbag">
+                <h5>Handbag</h5>
+                <p>₹1200</p>
+                <button class="btn btn-dark" onclick="addToCart(1200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="Backpack">
+                <h5>Camera</h5>
+                <p>₹40000</p>
+                <button class="btn btn-dark" onclick="addToCart(40000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-center shadow">
+                <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=400&q=80"
+                     class="card-img-top mb-2 product-img" alt="Travel Bag">
+                <h5>Watch</h5>
+                <p>₹2000</p>
+                <button class="btn btn-dark" onclick="addToCart(2000)">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- SHOP -->
+<div id="shopSection" class="container mt-5" style="display:none;">
+    <h2 class="text-center">All Products</h2>
+    <p class="text-center">Browse categories on Home page 👆</p>
+</div>
+
+<!-- CART -->
+<div id="cartSection" class="container mt-5" style="display:none;">
+    <h2>Your Cart 🛒</h2>
+    <p>Total Items: <span id="cartItems">0</span></p>
+    <p>Total Price: ₹ <span id="totalPrice">0</span></p>
+    <button class="btn btn-success">Place Order</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5">
+    © 2026 Adhya Fashion Store
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
