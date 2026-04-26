@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adhya Fashion Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar shadow">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- LEFT: LOGO -->
+        <a class="navbar-brand text-white fw-bold fs-4">Adhya Fashion</a>
+
+        <!-- CENTER: SEARCH -->
+        <form class="d-flex mx-auto search-bar" onsubmit="searchProducts(event)">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Search products...">
+            <button class="btn btn-light" type="submit">Search</button>
+        </form>
+
+        <!-- RIGHT: NAV BUTTONS -->
+        <div class="d-flex align-items-center nav-buttons">
+
+            <button class="btn btn-light me-2" type="button" onclick="showHome()">Home</button>
+            <button class="btn btn-light me-2" type="button" onclick="showShop()">Shop</button>
+            <button class="btn btn-light position-relative me-3" type="button" onclick="showCart()">
+                <i class="bi bi-cart"></i>
+                <span class="badge bg-danger cart-badge" id="cartCount">0</span>
+            </button>
+            <button class="btn btn-warning me-2" type="button" onclick="location.href='login.html'">Login/Signup</button>
+            <button class="btn btn-light" type="button">Help</button>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- HOME -->
+<div id="homeSection" class="container mt-4">
+
+    <!-- HERO -->
+    <div class="hero-box text-center text-white d-flex flex-column justify-content-center align-items-center">
+        <h1 class="fw-bold">New Collection 2026 ✨</h1>
+        <p>Trendy • Stylish • Affordable</p>
+        <button class="btn btn-light mt-3" onclick="showShop()">Shop Now</button>
+    </div>
+
+    <!-- PRODUCTS -->
+    <h3 class="mt-5 mb-4 text-center">Featured Collection</h3>
+
+    <!-- 🔥 HARDCODED PRODUCTS -->
+    <div class="row g-4" id="productContainer">
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" class="product-img" alt="Classic Denim Jacket">
+                <div class="p-3 text-center">
+                    <h5>Classic Denim Jacket</h5>
+                    <p class="price">₹1299</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo1", name: "Classic Denim Jacket", price: 1299, image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f", category: "Jackets", description: "A timeless denim jacket for all seasons."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" class="product-img" alt="Summer Floral Dress">
+                <div class="p-3 text-center">
+                    <h5>Summer Floral Dress</h5>
+                    <p class="price">₹999</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo2", name: "Summer Floral Dress", price: 999, image: "https://images.unsplash.com/photo-1517841905240-472988babdf9", category: "Dresses", description: "Light and breezy floral dress for summer."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="product-img" alt="Trendy Sneakers">
+                <div class="p-3 text-center">
+                    <h5>Trendy Sneakers</h5>
+                    <p class="price">₹1599</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo3", name: "Trendy Sneakers", price: 1599, image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308", category: "Shoes", description: "Comfortable and stylish sneakers for everyday wear."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- SHOP -->
+<div id="shopSection" class="container mt-5 d-none">
+    <h2 class="text-center">All Products</h2>
+
+    <!-- 🔥 HARDCODED PRODUCTS -->
+    <div class="row g-4" id="shopProducts">
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" class="product-img" alt="Classic Denim Jacket">
+                <div class="p-3 text-center">
+                    <h5>Classic Denim Jacket</h5>
+                    <p class="price">₹1299</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo1", name: "Classic Denim Jacket", price: 1299, image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f", category: "Jackets", description: "A timeless denim jacket for all seasons."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" class="product-img" alt="Summer Floral Dress">
+                <div class="p-3 text-center">
+                    <h5>Summer Floral Dress</h5>
+                    <p class="price">₹999</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo2", name: "Summer Floral Dress", price: 999, image: "https://images.unsplash.com/photo-1517841905240-472988babdf9", category: "Dresses", description: "Light and breezy floral dress for summer."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="product-img" alt="Trendy Sneakers">
+                <div class="p-3 text-center">
+                    <h5>Trendy Sneakers</h5>
+                    <p class="price">₹1599</p>
+                    <button class="btn btn-dark w-100" onclick='addToCart({_id: "demo3", name: "Trendy Sneakers", price: 1599, image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308", category: "Shoes", description: "Comfortable and stylish sneakers for everyday wear."})'>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CART -->
+<div id="cartSection" class="container mt-5 d-none">
+    <div class="cart-box p-4 shadow"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5">
+    © 2026 Adhya Fashion Store
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
